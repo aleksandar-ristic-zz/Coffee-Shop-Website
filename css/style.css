@@ -1,0 +1,262 @@
+/*
+*   Coffee Shop Styles
+*
+*/
+
+/***** Root & Global ********/
+
+:root {
+    --background-color: #fae39e;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+/****** Header **********/
+header {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#h1 {
+    font-weight: 700;
+    font-family: cursive;
+    font-size: 2rem;
+}
+
+header a, a:hover, a:visited {
+    color: white;
+    margin-left: 24px;
+}
+
+#close-btn, #menu-btn {
+    background: transparent;
+}
+
+#menu-btn i {
+    font-size: 28px;
+}
+
+.solid-header {
+    position: fixed;
+    background-color: rgb(165, 71, 42);
+    opacity: 0.95;
+
+    transition: background-color 0.5s ease;
+}
+
+.solid-header #header-logo, #header-logo-white {
+    height: 56px;
+}
+
+.card {
+    background-color: inherit;
+    position: relative;
+    display: inline-block;
+    border: none;
+}
+
+#header-logo, #header-logo-white {
+    height: 56px;
+}
+
+#header-logo-white {display: inline-block;}
+
+.card #header-logo {
+    display: none;
+    left: 0;
+    top: 0;
+    position: absolute;
+    z-index: 100;
+}
+
+.card:hover #header-logo {display: inline;}
+
+/****** Hero-Section *******/
+
+#hero-section {
+    background-image: url(../img/hero-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #4133329c;
+    height: 100vh;
+}
+
+#hero-logo {
+    width: 256px;
+}
+
+#arrow-down {
+    position: absolute;
+    right: 0;
+    bottom: 64px;
+    left: 0;
+    margin: 0 auto;
+    display: block;
+    width: 64px;
+}
+
+#arrow:hover {
+    animation: takingDown 1.2s infinite 0s ease-out;
+}
+
+@keyframes takingDown{
+    0%{
+        transform: translateY(-20%) scale(0.85);
+        }
+    30%{
+        transform: translateY(-10%),scale(0.95);
+        }
+    50%{
+        transform: translateY(0%) scale(1);
+        }
+    70%{
+        transform: translateY(10%) scale(1.05);
+        }
+    100%{
+        transform: translateY(20%) scale(1.15);
+        }
+}
+
+
+/******* Intro Section ********/
+
+#intro-section{
+    background: var(--background-color);
+}
+
+/****** About Section ******/
+
+#about-bg-1 {
+    background-image: url(../img/about-shop3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    min-height: 480px;
+}
+
+#about-bg-2 {
+    position: relative;
+    background-image: url(../img/about-coffee.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    height: 640px;
+}
+
+/************ Products *************/
+
+#products-section {
+    background: var(--background-color);
+}
+
+/******** Contact Section *********/
+
+#contact-info-bg-1 {
+    background: linear-gradient(to right, #36313782, #36313782), url(../img/come-in-we-are-open.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    padding-left: 5vw;
+}
+
+#contact-info-bg-2 {
+    background-color: #312423a8;
+    padding-left: 20vw;
+}
+
+/********* Footer ***********/
+
+#footer {
+    background-color: #312423;
+}
+
+#footer a i {
+    font-size: 22px;
+    color: white;
+}
+
+#footer a i:hover {
+    color: var(--background-color);
+}
+
+/********* Media Queries ********/
+
+@media (max-width: 768px) {
+    #about-bg-2::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: #a8a4a480;
+    }
+
+    #contact-info-bg-1 {
+        padding-left: 5vw;
+    }
+
+    #contact-info-bg-2 {
+        padding-left: 10vw;
+    }
+}
+
+/********** Mobile-Menu *************/
+
+#menu-icon {
+    background: white;
+    border: 2px solid white;
+    border-radius: 7px;
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #312423ed;
+    z-index: 2000;
+
+    display: none;
+}
+
+#mobile-menu a {
+    color: white;
+}
+
+#mobile-menu a:hover {
+    color: rgb(175, 171, 171);
+}
+
+#close-btn {
+    position: absolute;
+    right: 32px;
+    top: 25px;
+    width: 36px;
+
+    background: white;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/******* MAP *********/
+
+#map {
+    margin: 0 auto;
+    height: 50vh;
+    width: 80vw;
+}

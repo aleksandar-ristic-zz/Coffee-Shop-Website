@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--=== Meta ===-->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Coffee Shop Website Example</title>
+
+<!--=== Styles ===-->
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/1d8ba62dfc.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/leaflet/leaflet.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">        
+</head>
+<body>
+<!--=== Mobile Menu ===-->
+    <div id="mobile-menu">
+        <a id="close-btn" href="#">
+            <span class="fa-stack fa-1x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-times fa-stack-1x"></i>
+            </span>
+        </a>
+        <div class="container">
+            <div class="row vh-100 align-items-center">
+                <div class="col-12 text-center">
+                    <nav>
+                        <div>
+                            <a href="#about-section" class="mobile-menu-item text-decoration-none text-uppercase h3">about</a>
+                        </div>
+                        <div class="my-3">
+                            <a href="#products-section" class="mobile-menu-item text-decoration-none text-uppercase h3">products</a>
+                        </div>
+                        <div class="mb-3">
+                            <a href="#contact-info-section" class="mobile-menu-item text-decoration-none text-uppercase h3">contact</a>
+                        </div>
+                        <div>
+                            <a href="#map-section" class="mobile-menu-item text-decoration-none text-uppercase h3">how to find us?</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--=== Header ===-->
+    <header id="header" class="p-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-4">
+                    <a href="#hero-section">
+                        <span class="card">
+                            <img src="img/header-logo-white.png" alt="coffee shop header logo white"   id="header-logo-white" class="img-fluid">
+                            <img src="img/header-logo.png" alt="coffee shop header logo"   id="header-logo" class="img-fluid">
+                        </span>
+                    </a>
+                </div>
+                    <div class="d-none d-md-block col-8 text-right">
+                        <a href="#about-section" class="text-decoration-none text-uppercase">about</a>
+                        <a href="#products-section" class="text-decoration-none text-uppercase">products</a>
+                        <a href="#contact-info-section" class="text-decoration-none text-uppercase">contact</a>
+                        <a href="#map-section" class="text-decoration-none text-uppercase">how to find us?</a>
+                    </div>
+                <div class="d-md-none col-8 text-right">
+                        <a id="menu-btn" href="#"><i class="fas fa-bars"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+<!--=== Hero ===-->
+    <section id="hero-section" class="text-light">
+        <div class="container-fluid">
+            <div class="row vh-100 align-items-center pb-5">
+                <div class="col-12 text-center">
+                    <img id="hero-logo" src="img/hero-logo.png" alt="coffee shop logo">
+                    <h1 class="display-2 font-weight-bold">THE HOME OF COFFEE</h1>
+                    <p class="lead"> Instant aged, sugar crema cream percolator chicory.
+                        Pumpkin spice sweet crema.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Arrow to Intro-->
+        <a href="#intro-section" id="arrow-down">
+            <span class="fa-stack fa-2x">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fas fa-chevron-down fa-stack-1x" id="arrow"></i>
+            </span>
+        </a>
+    </section>
+<!--=== Intro ===-->
+    <section id="intro-section" class="py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-10 col-xl-6 text-center py-5">
+                     <h2 class="h1 font-weight-bold">THE BEST COFFEE SHOP</h2>
+                    <p>Dark skinny, doppio, siphon con panna, roast, shop 
+                        frappuccino as at frappuccino roast.
+                        Skinny viennese bar and dark strong roast, 
+                        cream ristretto half and half and aged.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4 text-center">
+                    <img class="py-4 img-fluid" src="img/coffee-beans.png" alt="Coffee beans">
+                    <p class="h4 font-weight-bold">BEST BEANS</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="py-3 img-fluid" src="img/coffee-and-milk.png" alt="Coffee with milk">
+                    <p class="h4 font-weight-bold">QUALITY MILK</p>
+                </div>
+                <div class="col-sm-4 text-center">
+                    <img class="py-3 img-fluid" src="img/perfect-blend.png" alt="Coffee to go!">
+                    <p class="h4 font-weight-bold">PERFECT BLEND</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--=== About ===-->
+    <section id="about-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-5 offset-md-1 align-self-center p-5">
+                    <h2>GREAT PLACE</h2>
+                    <p class="text-muted lead">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran, roast dripper sweet, cup steamed caramelization, 
+                        sweet macchiato, beans rich café au lait percolator cup id blue mountain. 
+                        Iced rich, single shot grounds, steamed latte bar, whipped that sugar froth in, 
+                        kopi-luwak, macchiato whipped percolator arabica to go. Americano eu ut.whipped, ajillo.
+                    </p>
+                    <button class="btn btn-primary">FIND OUT MORE!</button>
+                </div>
+                <div class="d-none d-md-block col-md-5 offset-md-1" id="about-bg-1"></div>
+            </div>
+            <div class="row align-items-center" id="about-bg-2">
+                <div class="d-none d-md-block col-md-6"></div>
+                <div class="col-12 col-md-6 p-5">
+                    <h2 class="text-dark font-weight-bold">FRESH BEANS</h2>
+                    <p class="lead text-dark">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran, roast dripper sweet, cup steamed caramelization, 
+                        sweet macchiato, beans rich café au lait percolator cup id blue mountain.
+                    </p>
+                    <button class="btn btn-primary">FIND OUT MORE!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--=== Products ===-->
+    <section id="products-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center py-5">
+                    <h2>SELECTION FROM OUR MENU</h2>
+                    <p class="lead text-dark">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran, roast dripper sweet, cup steamed caramelization, 
+                        sweet macchiato, beans rich café au lait percolator cup id blue mountain.
+                    </p>
+                </div> 
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/cupcakes-cocoa.jpg" alt="black coffee for you">
+                    <h2 class="my-2">COCOA CUPCAKES</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran</p>
+                    <p class="h3">4€</p>
+                </div>
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/cupcake-coffee-to-go.jpg" alt="cupcakes and coffee">
+                    <h2 class="my-2">CUPCAKE & COFFEE 2 GO</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran</p>
+                    <p class="h3">8€</p>
+                </div>
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/icecream.jpg" alt="delicious icecream">
+                    <h2 class="my-2">DELICIOUS ICECREAM</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran</p>
+                    <p class="h3">3€</p>
+                </div>
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/black-coffee.jpg" alt="black coffee">
+                    <h2 class="my-2">BLACK COFFEE</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                    cultivar mazagran</p>
+                    <p class="h3">6€</p>
+                </div>
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/esspresso-coffee.jpg" alt="esspresso coffee">
+                    <h2 class="my-2">ESSPRESSO COFFEE</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran</p>
+                    <p class="h3">6€</p>
+                </div>
+                <div class="col-sm-6 col-md-4 p-5 text-center">
+                    <img class="img-fluid" src="img/hot-chocolate-couple.jpg" alt="hot chocolate for couples">
+                    <h2 class="py-2">COUPLE HOT CHOCOLATE</h2>
+                    <p class="lead my-3">Redeye saucer so, decaffeinated extra bar seasonal, 
+                        cultivar mazagran</p>
+                    <p class="h3">8€</p>
+                </div>    
+            </div>
+        </div>
+    </section>
+<!--=== Map ===-->
+    <section id="map-section">
+        <div id="map"></div>
+    </section>
+<!--=== Contact Info ===-->
+    <section id="contact-info-section">
+        <div class="container-fluid text-light">
+            <div class="row" id="contact-info-bg-1">
+                <div class="col-md-5 offset-md-1 p-5">
+                    <h2>YOU ARE WELCOME</h2>
+                    <p class="pb-1">COME ON IN!</p>
+                    <h3>WEEKDAYS</h2>
+                    <p class="pb-1">08 PM-12 AM</p>
+                    <h3>WEEKENDS</h2>
+                    <p class="pb-1">12 PM-02 AM</p>
+                </div>
+                <div class="col-md-6 p-5" id=contact-info-bg-2>
+                    <h2 class="pb-1">CONTACT</h2>
+                    <h>PHONE</h2>
+                    <p class="pb-1">+(000) 111 222 333</p>
+                    <h4>MAIL</h2>
+                    <p class="pb-1">address@domain</p>
+                    <h4>ADDRESS</h3>
+                    <p class="pb-1">543 TN, doula street NY, NEW YORK</p>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--=== Footer ===-->
+    <footer class="container-fluid text-light py-3" id="footer">
+        <div class="row">
+            <div class="col-md-5 mb-2 offset-md-1 text-center text-md-left">
+                Coffee Shop | @ 2020 All rights reserved
+            </div>
+            <div class="col-md-5 text-md-right text-center">
+                <a href="#"><i class="fab fa-facebook-square"></i></a>
+                <a href="#"><i class="fab fa-instagram-square"></i></a>
+                <a href="#"><i class="fab fa-twitter-square"></i></a>
+                <a href="#"><i class="fas fa-phone-square-alt"></i></a>
+            </div>
+        </div>
+    </footer>    
+
+<!--=== Scripts ===-->
+    <script src="js/jquery-3.5.0.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
