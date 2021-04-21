@@ -1,4 +1,4 @@
-// jQuery
+// Menu Toggle - jQuery
 $(document).ready( function(){
 
     $('#menu-btn, #close-btn').click( function(){
@@ -9,7 +9,7 @@ $(document).ready( function(){
         $('#mobile-menu').hide();
     });
 
-/* Vanilla -JS
+/* Menu Toggle - Vanilla -JS
 
 window.addEventListener("load", function(){
                 
@@ -33,7 +33,7 @@ window.addEventListener("load", function(){
         });
     }
     */
-    // Header - jQuery
+// Header - jQuery
 
     $(document).scroll(function(){
         let header = $('#header');
@@ -49,27 +49,6 @@ window.addEventListener("load", function(){
             }
         }
     });
-
-    var myMap = L.map('map', {
-        center: [40.741770, -73.983090],
-        zoom: 17
-    
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://wwww.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-    }).addTo(myMap);
-
-    var myIcon = L.icon({
-        iconUrl: 'img/coffee-map.png'
-    });
-
-    var marker = L.marker([40.741770, -73.983090], {
-        icon: myIcon 
-    }).addTo(myMap);
-
-});
-
 /*  Header Vanilla -JS    
 
 let heroSection = document.getElementById("hero-section");
@@ -90,3 +69,25 @@ document.addEventListener("scroll", function(){
 });
 
 */
+
+// Leaflet - Interactive map and pin
+    var myMap = L.map('map', {
+        center: [40.741770, -73.983090],
+        zoom: 17
+    
+    });
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://wwww.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(myMap);
+
+    var myIcon = L.icon({
+        iconUrl: 'img/hero-logo.png',
+        iconSize: [65, 65],
+    });
+
+    var marker = L.marker([40.741770, -73.983090], {
+        icon: myIcon 
+    }).addTo(myMap);
+
+});
